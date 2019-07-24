@@ -1,8 +1,12 @@
 import React from 'react';
-import {Card, CardBody, CardHeader, CardFooter,Col, Row} from 'reactstrap';
+import {Card, CardBody, CardHeader, CardFooter,Col, Row,Button} from 'reactstrap';
 import './Topnews.css';
 import Worldcup from './Worldcup.jpg';
 import New1 from './New1.jpg';
+import { MdAccountCircle } from "react-icons/md";
+import {IoLogoFacebook,IoLogoTwitter,IoLogoInstagram } from "react-icons/io";
+
+
 var bgColors = { "Default": "#81b71a",
                     "Blue": "#66d9ff",
                     "Cyan": "#37BC9B",
@@ -10,6 +14,7 @@ var bgColors = { "Default": "#81b71a",
                     "Red": "#E9573F",
                     "Yellow": "#F6BB42"
 };
+
 
 
 const Topnews=()=>
@@ -32,30 +37,62 @@ const Topnews=()=>
         	</Card>
         <div className="pa6">
         	<Card style={{width:500,height:500}}>
-        		<CardHeader>
-        	  		<Col xs="12" sm="8" md="3" xl="2">
-                		<i className="cui-envelope-open icons font-2xl d-block mt-4"></i>
-                		<div>envelope-open</div>
-              		</Col>
+        		<CardHeader bordered>
+        	  		<Col className="tl pa0">
+                    <MdAccountCircle size={40}/> <span className="fs-normal">SHUBHI MIRAWDAL</span>
+              	</Col>
         		</CardHeader>
         		<CardBody style={{backgroundImage: `url(${New1})`}}>
            			 <Row className=" f1 dib v-btm lightest-blue">
-             			<Col col="12" xl className="pa0">
-              			 helo
-             			</Col>
+             			
           			</Row>
         		</CardBody>
           
-        		<CardFooter>
-        	 		<Col xs="12" sm="8" md="3" xl="2">
-                  <span class="cuis-accessible" aria-hidden="true"></span> 
-                    
-              </Col>
+        		<CardFooter >
+              <div className="tl">
+              <Button color="secondary" size="lg" className="float-left pr4" >Read more</Button></div> 
+              <div className="tr">                           
+              <span className="pa3 pl5"><IoLogoFacebook size={40}/></span>
+              <span className="pa2"><IoLogoTwitter size={40}/></span>
+              <span className="pa2"><IoLogoInstagram size={40}/></span>
+              </div>
+              
+              
           </CardFooter>
         	</Card>
         	</div>
         
+        <div className="pa6 pt2">
+          <Card style={{width:500,height:500}} >
+            <CardHeader>
+                <Col className="tl pa0">
+                    <MdAccountCircle size={40}/> <span className="fs-normal">SHUBHI MIRAWDAL</span>
+                </Col>
+            </CardHeader>
+            <CardBody style={{backgroundImage: `url(${New1})`}}>
+                 <Row className=" f1 dib v-btm lightest-blue">
+                  
+                </Row>
+            </CardBody>
+          
+            <CardFooter >
+              <div className="tl">
+              <Button color="secondary" size="lg" className="float-left pr4" >Read more</Button></div> 
+              <div className="tr">                           
+              <span className="pa3 pl5"><IoLogoFacebook size={40}/></span>
+              <span className="pa2"><IoLogoTwitter size={40}/></span>
+              <span className="pa2"><IoLogoInstagram size={40}/></span>
+              </div>
+              
+              
+          </CardFooter>
+          </Card>
+          </div>
         </div>
+
+
+
+
 		);
 }
 export default Topnews;
